@@ -18,3 +18,7 @@ This project is a Tic-Tac-Toe game that allows the user to play against the CPU 
 ### CSS Stylesheets (CSS_First.css & CSS_Second.css)
 
 -  Two CSS files are included to enhance the visual presentation and styling of each web page.
+
+### Access the game here 
+
+- [Tic-Tac-Toe : Can you beat it ?](https://anmol2264.github.io/Tic-Tac-Toe/)
