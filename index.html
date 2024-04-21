@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cssFirstPage.css">
+    <link rel="stylesheet" href="css2.css">
     <title>Tic-Tac-Toe - Can You Beat it ? </title>
 </head>
 
@@ -13,12 +13,16 @@
     <div class="choice-heading">Choose Your Symbol</div>
     <div id="button-container">
         <form method="get" action="second.html">
-            <button class="x_button button" type="submit" value="X" name="choice">X</button>
+            <div class="buttonContainer">
+                <button class="Xbutton button" type="submit" value="X" name="choice">X</button>
+            </div>
         </form>
-        <div id="or" style="margin-top: 0px;">OR</div>
+        <div id="or">OR</div>
         <form method="get" action="second.html">
-            <button class="o_button button" style="border-radius: 100px;" value="O" type="submit"
-                name="choice">O</button>
+            <div class="buttonContainer">
+                <button class="Obutton button" style="border-radius: 100px;" value="O" type="submit"
+                    name="choice">O</button>
+            </div>
         </form>
     </div>
 </body>

@@ -1,6 +1,7 @@
+/* Common styles for all screen sizes */
 body {
     text-align: center;
-    background: url("backgroundFirstPage.jpg");
+    background: url("backgroundFirstPagePC.jpg");
     background-attachment: fixed;
     background-size: cover;
     align-items: center;
@@ -17,9 +18,13 @@ body {
     margin-top: 60px;
     margin-bottom: -160px;
     height: 90px;
-    width: 1450px;
+    width: 80%;
     background: rgb(211, 206, 206);
     border-radius: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0% 5% 0% 5%;
 }
 
 #button-container {
@@ -27,29 +32,32 @@ body {
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    height: 60vh;
+    height: 55vh;
 }
 
 .button {
     font-size: 120px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px 40px;
-    margin-left: 160px;
-    margin-right: 160px;
-    margin-top: 0px;
     cursor: pointer;
-    transition: background-color 1s, border-width 95ms;
+    transition: background-color 1s, border-width 90ms;
     border: 2px solid;
 }
 
-.x_button:hover {
+.Xbutton:hover {
     background-color: rgb(235, 175, 175);
     border: 1px solid black;
     border-width: thick;
     color: red;
 }
 
-.o_button:hover {
+.buttonContainer {
+    width: 300px;
+    height: fit-content;
+    position: relative;
+}
+
+.Obutton:hover {
     background-color: rgb(161, 205, 240);
     border: 1px solid black;
     border-width: thick;
@@ -57,7 +65,7 @@ body {
 }
 
 .choice-heading {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
     margin-top: 260px;
     margin-bottom: -20px;
@@ -66,14 +74,67 @@ body {
     min-width: 380px;
     background: rgb(211, 206, 206);
     border-radius: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 #or {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
-    margin-top: 0px;
-    height: 90px;
-    width: 200px;
+    height: 1.5em;
+    width: 170px;
+    margin-left: 2em;
+    margin-right: 2em;
     background: rgb(211, 206, 206);
     border-radius: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* For smaller screens - Mobile Phones */
+@media screen and (max-width: 768px) {
+
+    body {
+        background: url("backgroundFirstPageMobile.jpg");
+    }
+
+    #tic-tac-toe-heading {
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: -80px;
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 8em;
+    }
+
+    .button {
+        font-size: 60px;
+        padding: 15px 30px;
+    }
+
+    .choice-heading {
+        font-size: 30px;
+        margin-top: 50%;
+        margin-bottom: -10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 90%;
+    }
+
+    #or {
+        font-size: 50px;
+        height: 60px;
+        width: 2.5em;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    .buttonContainer {
+        width: 160px;
+        ;
+        height: fit-content;
+        position: relative;
+    }
 }

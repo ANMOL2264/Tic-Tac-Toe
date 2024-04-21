@@ -1,12 +1,15 @@
+/* Default styles for all screen sizes */
 body {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    vertical-align: middle;
     height: 100vh;
     margin: 0;
     background-image: url("backgroundSecondPage.jpg");
+    overflow: hidden;
 }
 
 .board {
@@ -37,31 +40,28 @@ body {
 
 .reset:hover {
     background-color: #f0f0f0;
-
 }
 
 #message {
-    font-size: 45px;
+    font-size: 2em;
     color: black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 20px auto;
-    width: fit-content;
-    min-width: 550px;
-    height: 67px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 16em;
+    height: 75px;
+    line-height: 70px;
     background: rgb(211, 206, 206);
     border-radius: 100px;
+    margin: 2% 0 1% 0;
 }
 
 .reset {
     font-size: 40px;
     color: black;
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 20px auto;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 250px;
-    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 20px 10px 20px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
     background: rgb(211, 206, 206);
     border-radius: 100px;
     cursor: pointer;
@@ -72,10 +72,11 @@ body {
 .score {
     font-size: 55px;
     color: black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 20px 45px 5px 45px;
     width: 120px;
     height: 70px;
+    line-height: 70px;
     background: rgb(211, 206, 206);
     border-radius: 100px;
     flex: 1;
@@ -84,8 +85,8 @@ body {
 .player_name {
     font-size: 40px;
     color: black;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px 40px 5px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 40px 5px 40px;
     width: 130px;
     height: 60px;
     background: rgb(211, 206, 206);
@@ -95,4 +96,57 @@ body {
 
 .float-container {
     display: flex;
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 70px;
+    }
+
+    #message {
+        font-size: 1.3em;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-width: unset;
+        width: 12.5em;
+        margin: 5% 0 1% 0;
+    }
+
+    .reset {
+        font-size: 20px;
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .score {
+        font-size: 40px;
+        margin: 30px 20px 5px 20px;
+        width: 100px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .player_name {
+        font-size: 30px;
+        margin: 30px 20px 5px 20px;
+        width: 100px;
+        height: 55px;
+        line-height: 50px;
+    }
 }
