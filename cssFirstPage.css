@@ -6,6 +6,8 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.85);
 }
 
 #tic-tac-toe-heading {
